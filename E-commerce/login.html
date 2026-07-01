@@ -1,0 +1,207 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Apna Bazar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Apna Bazar</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">← Back to Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact-section"> <h2>User Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email Address:</label>
+                    <input type="email" id="login-email" required placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="login-pass">Password:</label>
+                    <input type="password" id="login-pass" required placeholder="Enter Password">
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Apna Bazar. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            alert(`Welcome back! Logged in successfully as: ${email}`);
+            // Login hone ke baad user ko wapas home page par bhej dega
+            window.location.href = 'index.html'; 
+        });
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Apna Bazar</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* REGISTER/LOGIN PAGE SPECIFIC STYLING */
+        .login-body {
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            padding: 20px;
+        }
+
+        .login-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(11, 64, 53, 0.1);
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+            border-top: 5px solid #1abc9c;
+        }
+
+        .login-card h2 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: #0c0f13;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        /* Input focus hone par glow effect */
+        .input-group input:focus {
+            border-color: #1abc9c;
+            outline: none;
+            box-shadow: 0 0 8px rgba(26, 188, 156, 0.2);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #0b4035, #1abc9c);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(26, 188, 156, 0.3);
+        }
+
+        .login-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .login-footer a {
+            color: #1abc9c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Apna Bazar</h1>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="cart.html">🛒 Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="login-body">
+        <div class="login-card">
+            <h2>Welcome Back</h2>
+            <form onsubmit="handleLogin(event)">
+                
+                <div class="input-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" required placeholder="example@email.com">
+                </div>
+
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required placeholder="••••••••">
+                </div>
+
+                <button type="submit" class="login-btn">Sign In</button>
+            </form>
+
+            <div class="login-footer">
+                <p>Don't have an account? <a href="#" onclick="alert('Registration feature coming soon!')">Create Account</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 My Choice. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Chhota sa dynamic message login hone par
+        function handleLogin(event) {
+            event.preventDefault(); // Page refresh hone se rokna
+            const email = document.getElementById('login-email').value;
+            alert(`Welcome! Login Successful with: ${email}`);
+            window.location.href = "index.html"; // Login hote hi home page par transfer karna
+        }
+    </script>
+</body>
+</html>

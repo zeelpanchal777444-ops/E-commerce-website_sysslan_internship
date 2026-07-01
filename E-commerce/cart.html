@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Apna Bazar</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Sirf Cart Page ke liye extra simple styling */
+        .cart-wrapper { max-width: 800px; margin: 40px auto; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .cart-item { display: flex; align-items: center; justify-content: space-between; padding: 15px; border-bottom: 1px solid #eee; }
+        .cart-item img { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; }
+        .cart-item-info { flex: 1; margin-left: 20px; }
+        .remove-btn { background: #e74c3c; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
+        .cart-total { text-align: right; margin-top: 20px; font-size: 1.3rem; font-weight: bold; color: #0b4035; }
+        .checkout-btn { display: block; width: 100%; max-width: 200px; margin: 20px 0 0 auto; background: #1abc9c; color: white; border: none; padding: 12px; font-size: 1rem; border-radius: 6px; cursor: pointer; font-weight: bold; }
+        .empty-message { text-align: center; font-size: 1.2rem; color: #777; padding: 40px 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Apna Bazar</h1>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html" style="color: #1abc9c; font-weight: bold;">🛒 My Cart (<span id="cart-nav-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cart-wrapper">
+            <h2>Shopping Cart</h2>
+            <!-- Yahan par JavaScript se saare added items automatic aayenge -->
+            <div id="cart-items-list"></div>
+            
+            <div class="cart-total">Total: ₹<span id="cart-total-price">0</span></div>
+            <button class="checkout-btn" onclick="alert('Order Placed Successfully!')">Proceed to Checkout</button>
+        </div>
+    </main>
+
+    <script>
+        // CART PAGE LOGIC
+        function displayCart() {
+            // LocalStorage se cart data nikalna
+            let cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+            let listContainer = document.getElementById('cart-items-list');
+            let totalPriceSpan = document.getElementById('cart-total-price');
+            let navCount = document.getElementById('cart-nav-count');
+            
+            navCount.innerText = cart.length;
+            listContainer.innerHTML = ''; // Pehle se clear karna
+            
+            if(cart.length === 0) {
+                listContainer.innerHTML = '<p class="empty-message">Your cart is empty! Start shopping.</p>';
+                totalPriceSpan.innerText = '0';
+                return;
+            }
+            
+            let total = 0;
+            
+            cart.forEach((item, index) => {
+                total += item.price;
+                listContainer.innerHTML += `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="cart-item-info">
+                            <h3>${item.name}</h3>
+                            <p style="color: #1abc9c; font-weight: bold;">₹${item.price}</p>
+                        </div>
+                        <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+                    </div>
+                `;
+            });
+            
+            totalPriceSpan.innerText = total.toLocaleString('en-IN');
+        }
+
+        // Item delete karne ka function
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+            cart.splice(index, 1); // Array se item hatana
+            localStorage.setItem('shoppingCart', JSON.stringify(cart)); // Update localStorage
+            displayCart(); // Page refresh bina kiye reload karna
+        }
+
+        // Page load hote hi chalega
+        window.onload = displayCart;
+    </script>
+</body>
+</html>

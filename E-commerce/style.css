@@ -1,0 +1,405 @@
+/* ==========================================
+   GENERAL STYLING, FONTS & LAYOUT
+   ========================================== */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #0c0f13;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Desktop Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
+}
+
+.cart-status {
+    font-weight: bold;
+    color: #1abc9c;
+}
+
+/* Desktop Hamburger Menu Button - Hidden by default */
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.img img {
+    width: 100%;
+    display: block;
+    object-fit: fill;
+}
+
+/* ==========================================
+   MODERN ROUNDED INFINITE TICKER STYLING
+   ========================================== */
+.ticker-wrapper {
+    max-width: 95%; /* Screen se thoda chhota taaki capsule look dikhe */
+    margin: 30px auto; /* Page ke center mein lane ke liye */
+    background: linear-gradient(135deg, #0b4035, #0e2a24); /* Elegant Gradient Background */
+    border-radius: 50px; /* MAGIC LINE: Isse corners ekdum perfect round (capsule) ho jayenge */
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 16px 30px; /* Side mein thoda padding badhaya */
+    box-shadow: 0 8px 20px rgba(26, 188, 156, 0.2); /* Soft glowing shadow */
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Subtle premium border */
+}
+
+.ticker-container {
+    display: inline-flex;
+    gap: 60px; /* Categories ke beech ka perfect gap */
+    animation: scroll-ticker 20s linear infinite; /* Speed ko thoda smooth (20s) kiya */
+}
+
+/* INTERACTIVE FEATURE: Mouse le jaane par chalna ruk jayega */
+.ticker-wrapper:hover .ticker-container {
+    animation-play-state: paused; 
+}
+
+.ticker-item {
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1); /* Har item ke piche ek halka sa glass effect box */
+    padding: 6px 18px;
+    border-radius: 30px; /* Items ko bhi stylish round kiya */
+    transition: all 0.3s ease;
+}
+
+.ticker-item span {
+    font-size: 1.4rem;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); /* Icons par thodi shadow */
+}
+
+/* Hover karne par item glow karega */
+.ticker-item:hover {
+    background-color: white;
+    color: #0b4035;
+    transform: translateY(-2px); /* Thoda upar uthega */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* MAGIC ANIMATION CODE */
+@keyframes scroll-ticker {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Products Grid Setup */
+#products {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+#products h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    width: 338px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 15px 0 5px 0;
+}
+
+.product-card .description {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.category-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #0b4035;
+    color: white;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.product-card .price {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+.add-to-cart-btn {
+    background-color: #0b293d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0cf33a;
+    color: #0c0f13;
+}
+
+/* ----------new ---------- */
+#products {
+    max-width: 1300px; /* Thoda bada kiya taaki 4 box araam se aayein */
+    margin: 40px auto;
+    padding: 0 10px; /* Side ki padding kam ki */
+    text-align: center;
+}
+
+/* Grid layout ko exact 4 columns mein divide karne ke liye */
+.products-grid {
+    display: grid;
+    /* Isse automatic 4 barabar columns ban jayenge aur side space khatam hogi */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; /* Box ke beech ka gap */
+    margin-top: 20px;
+}
+
+/* Card ki fixed width hatakar use auto ya 100% karein */
+.product-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px; /* Spacing thodi compact ki */
+    width: 338px; /* Fixed 250px hataya taaki grid ke hisab se set ho */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+/* ==========================================
+   INTERACTIVE ELEMENTS & FORMS
+   ========================================== */
+.hidden {
+    display: none;
+}
+
+.extra-details {
+    font-size: 0.8rem;
+    color: #555;
+    background-color: #f1f2f6;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.toggle-details-btn {
+    background: none;
+    border: none;
+    color: #15a523;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin: 5px 0;
+}
+
+.add-to-cart-btn.added {
+    background-color: #b82012 !important;
+    color: white !important;
+    cursor: not-allowed;
+}
+
+#contact-section {
+    max-width: 1508px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #1a252f;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: -24px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+/* ==========================================
+   LEVEL 5: MEDIA QUERIES (Mobile View)
+   ========================================== */
+@media (max-width: 768px) {
+    header {
+        position: relative;
+        padding: 20px; /* Mobile par header spacing thodi kam ki */
+    }
+
+    .menu-btn {
+        display: block; /* Mobile par hamburger icon dikhega */
+    }
+
+    nav {
+        display: none; /* Default mein links hidden rahenge */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0c0f13;
+        padding: 20px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    /* Jab JS 'active' class add karega toh menu khulega */
+    nav.active {
+        display: block !important;
+    }
+
+    nav ul {
+        flex-direction: column; /* Links ek ke niche ek aayenge */
+        gap: 15px;
+        align-items: center;
+    }
+
+    /* FIX: Mobile par 4 columns hatakar 1 column karne ke liye */
+    .products-grid {
+        grid-template-columns: 1fr !important; /* Sirf 1 box ek line mein */
+        justify-items: center;
+        gap: 20px;
+    }
+
+    .product-card {
+        width: 90% !important; /* Card screen ke hisab se bada dikhega */
+        max-width: 350px;
+    }
+
+    #contact-section {
+        width: 90%;
+        margin: 30px auto;
+        padding: 15px;
+    }
+}

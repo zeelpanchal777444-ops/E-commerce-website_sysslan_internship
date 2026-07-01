@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - My Choice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Apna Bazar</h1>
+        <button id="menu-toggle" class="menu-btn">☰</button>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html" class="active-nav" style="color: #1abc9c;">Products</a></li>
+                <li><a href="index.html#contact-section">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li class="cart-status">🛒 Cart: <span id="cart-count">0</span></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="products">
+        <h2>Our Categories</h2>
+
+        <div class="category-section">
+            <h3 class="category-heading">⚡ Electronics</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <span class="category-tag">Electronics</span>
+                    <img src="fan.jpeg" alt="Wireless Fan">
+                    <h3>Wireless Fan</h3>
+                    <p class="description">High-speed rechargeable portable fan with adjustable stands.</p>
+                    <button class="toggle-details-btn">Show Details</button>
+                    <p class="extra-details hidden">Battery: 5000mAh | 3 Speed Modes | Warranty: 1 Year</p>
+                    <p class="price">Price: ₹1,499</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <span class="category-tag">Electronics</span>
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Headphones">
+                    <h3>Wireless Headphones</h3>
+                    <p class="description">Bass-boosted bluetooth headphones with noise cancellation.</p>
+                    <button class="toggle-details-btn">Show Details</button>
+                    <p class="extra-details hidden">Battery Life: 40 Hours | Bluetooth 5.2 | Type-C Charging</p>
+                    <p class="price">Price: ₹1,999</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <span class="category-tag">Electronics</span>
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Smart Speaker">
+                    <h3>AI Smart Speaker</h3>
+                    <p class="description">Voice-controlled assistant speaker with rich, cinematic sound.</p>
+                    <button class="toggle-details-btn">Show Details</button>
+                    <p class="extra-details hidden">Smart Home Connectivity | Dual Mics | Bluetooth & Wi-Fi</p>
+                    <p class="price">Price: ₹2,999</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <span class="category-tag">Electronics</span>
+                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=500" alt="Power Bank">
+                    <h3>Fast Power Bank</h3>
+                    <p class="description">20000mAh heavy-duty power bank with 22.5W triple fast charging ports.</p>
+                    <button class="toggle-details-btn">Show Details</button>
+                    <p class="extra-details hidden">Lithium Polymer Battery | LED Indicator | Pocket Size</p>
+                    <p class="price">Price: ₹1,199</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h3 class="category-heading">👕 Clothing & Fashion</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <span class="category-tag">Clothing</span>
+                    <img src="images.jpg" alt="Casual Jacket">
+                    <h3>Premium Jacket</h3>
+                    <p class="description">Stylish and warm denim jacket perfect for winter and casual outings.</p>
+                    <button class="toggle-details-btn">Show Details</button>
+                    <p class="extra-details hidden">Material: 100% Denim | Premium Stitching | Sizes: M, L, XL</p>
+                    <p class="price">Price: ₹2,499</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <span class="category-tag">Clothing</span>
+                    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500" alt="Cotton T-Shirt">
+                    <h3>Classic Cotton T-Shirt</h3>
+                    <p class="description">Pack of 3 breathable pure cotton t-shirts for everyday comfort.</p>
+                    <button class="toggle-details-btn">Show Details</button>
+                    <p class="extra-details hidden">Material: Regular Fit | Bio-washed Cotton | Colors: Black, Navy, Grey</p>
+                    <p class="price">Price: ₹799</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <span class="category-tag">Clothing</span>
+                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=500" alt="Slim Fit Jeans">
+                    <h3>Slim Fit Denim Jeans</h3>
+                    <p class="description">Stretchable and durable dark blue jeans designed for ultimate style.</p>
+                    <button class="toggle-details-btn">Show Details</button>
+                    <p class="extra-details hidden">Style: Slim Fit | 98% Cotton 2% Spandex | Fade Resistant</p>
+                    <p class="price">Price: ₹1,299</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <span class="category-tag">Clothing</span>
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500" alt="Summer Dress">
+                    <h3>Elegant Summer Dress</h3>
+                    <p class="description">Lightweight, beautifully printed floral dress perfect for beach days.</p>
+                    <button class="toggle-details-btn">Show Details</button>
+                    <p class="extra-details hidden">Fabric: Georgette | Breathable Inner Lining | Length: Knee Length</p>
+                    <p class="price">Price: ₹1,699</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h3 class="category-heading">⌚ Gadgets & Accessories</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <span class="category-tag">Accessories</span>
+                    <img src="watch.jpg" alt="Smart Watch">
+                    <h3>Smart Fitness Watch</h3>
+                    <p class="description">Tracks your daily steps, oxygen level, heart rate, and sleep quality.</p>
+                    <button class="toggle-details-btn">Show Details</button>
+                    <p class="extra-details hidden">Water Resistant IP68 | AMOLED Display | 10 Days Battery</p>
+                    <p class="price">Price: ₹3,999</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <span class="category-tag">Accessories</span>
+                    <img src="wallet.jpg" alt="Leather Wallet">
+                    <h3>Minimalist Leather Wallet</h3>
+                    <p class="description">Genuine leather slim bi-fold wallet equipped with RFID blocking protection.</p>
+                    <button class="toggle-details-btn">Show Details</button>
+                    <p class="extra-details hidden">6 Card Slots | 1 Currency Slot | Material: Hunter Leather</p>
+                    <p class="price">Price: ₹599</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <span class="category-tag">Accessories</span>
+                    <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=500" alt="Sunglasses">
+                    <h3>Aviator Sunglasses</h3>
+                    <p class="description">Polarized sunglasses with 100% UV protection metal frame.</p>
+                    <button class="toggle-details-btn">Show Details</button>
+                    <p class="extra-details hidden">Lens Color: Black-Green | Frame Material: Stainless Steel</p>
+                    <p class="price">Price: ₹899</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <span class="category-tag">Accessories</span>
+                    <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500" alt="Backpack">
+                    <h3>Travel Laptop Backpack</h3>
+                    <p class="description">Water-resistant backpack with anti-theft pocket and USB charging slot.</p>
+                    <button class="toggle-details-btn">Show Details</button>
+                    <p class="extra-details hidden">Capacity: 32L | Fits up to 15.6 Inch Laptop | 3 Compartments</p>
+                    <p class="price">Price: ₹1,799</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h3 class="category-heading">🏺 Home Decor</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <span class="category-tag">Home Decor</span>
+                    <img src="flower.jpg" alt="Flower Pot">
+                    <h3>Ceramic Flower Pot</h3>
+                    <p class="description">A beautiful ceramic pot that brings elegance and style to your home.</p>
+                    <button class="toggle-details-btn">Show Details</button>
+                    <p class="extra-details hidden">Premium Ceramic Material | Size: Medium | Glossy Finish</p>
+                    <p class="price">Price: ₹3,999</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <span class="category-tag">Home Decor</span>
+                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=500" alt="Table Lamp">
+                    <h3>Modern Table Lamp</h3>
+                    <p class="description">Minimalist wooden base table lamp providing warm ambient light for bedrooms.</p>
+                    <button class="toggle-details-btn">Show Details</button>
+                    <p class="extra-details hidden">Bulb Type: E27 LED | Cord Length: 1.5 Meter | Fabric Shade</p>
+                    <p class="price">Price: ₹1,249</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <span class="category-tag">Home Decor</span>
+                    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=500" alt="Wall Clock">
+                    <h3>Vintage Wall Clock</h3>
+                    <p class="description">Big numeric wooden finished wall clock for a classic royal look.</p>
+                    <button class="toggle-details-btn">Show Details</button>
+                    <p class="extra-details hidden">Diameter: 12 Inches | Machine: Silent Sweep Quartz | Battery Operated</p>
+                    <p class="price">Price: ₹999</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <span class="category-tag">Home Decor</span>
+                    <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=500" alt="Scented Candles">
+                    <h3>Scented Wax Candles</h3>
+                    <p class="description">Pack of 4 aromatic lavender soy wax candles for relaxation and therapy.</p>
+                    <button class="toggle-details-btn">Show Details</button>
+                    <p class="extra-details hidden">Burn Time: 15 Hours Each | 100% Organic Soy Wax | Smokeless</p>
+                    <p class="price">Price: ₹499</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Choice. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
