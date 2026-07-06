@@ -5,7 +5,7 @@ A simple e-commerce website built using **HTML, CSS, and JavaScript**.
 ---
 
 ## 🔗 Live Demo
-> Add your link here (GitHub Pages / Netlify)
+https://github.com/zeelpanchal777444-ops/E-commerce-website_sysslan_internship
 
 ---
 
@@ -43,7 +43,6 @@ A simple e-commerce website built using **HTML, CSS, and JavaScript**.
 3. That's it — no setup needed!
 
 ```bash
-git clone https://github.com/yourusername/ecommerce-website.git
 cd ecommerce-website
 open index.html
 ```
@@ -68,5 +67,5 @@ ecommerce-website/
 ## 🙋‍♀️ Made By
 
 **Zeel Panchal**  
-[LinkedIn](https://www.linkedin.com/in/zeelpanchal2004) · [GitHub](https://github.com/yourusername)
+[LinkedIn](www.linkedin.com/in/zeelpanchal2004) · [GitHub](https://github.com/zeelpanchal777444-ops/E-commerce-website_sysslan_internship)
 
