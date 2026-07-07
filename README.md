@@ -62,6 +62,7 @@ ecommerce-website/
 │__ style.css
 ├── script.js
 └── images
+Screenshort.
 ```
 
 ---
